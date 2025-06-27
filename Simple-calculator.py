@@ -50,7 +50,7 @@ def main1(a, b, c):
             print(a, "*", b, "=", a * b)
         return
         
-    #if c == "**" :   #Under development
+    if c == "**" :   #Under development
         if a == 0 :
             print("err 0 ** number's = incorrect")
         else :
@@ -68,11 +68,11 @@ def main1(a, b, c):
                 print(int(a) , "**" , b , "=" , int(a)**b)
             #else :
                 #print(int(a) , "**" , int(b) , "=" , int(a ** b))
-            else:
-                print("error please enter (* , / , + , -)")
+            return
+    else:
+        print("error please enter (* , / , + , -)")
         return
-
-
+    
 def loop():
     while True:
         raw = input("yek chiz vared konid for exam :: 5 + 1 or ('exit') :").strip()  #Receives a number from the user (with a space)
