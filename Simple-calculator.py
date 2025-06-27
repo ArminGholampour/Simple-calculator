@@ -29,25 +29,21 @@ def main1(a, b, c):
         if b == 0:
             print("Error: division by zero!")
             return
-        if a % b == 0:
-            print(int(a), "/", int(b), "=", int(a / b))
-        elif a % 2 == 0:
+        elif a // 2 == 0:
             print(int(a), "/", b, "=", int(a) / b)
-        elif b % 2 == 0:
+        elif b // 2 == 0:
             print(a, "/", int(b), "=", a / int(b))
         else:
-            print(a, "/", b, "=", a / b)
+            print(int(a), "/", int(b), "=", int(a / b))
         return
 
     elif c == "*":
-        if a % b == 0:
-            print(int(a), "*", int(b), "=", int(a * b))
-        elif a % 2 == 0:
+        if a // 2 == 0:
             print(int(a), "*", b, "=", int(a) * b)
-        elif b % 2 == 0:
+        elif b // 2 == 0:
             print(a, "*", int(b), "=", a * int(b))
         else:
-            print(a, "*", b, "=", a * b)
+            print(int(a), "*", int(b), "=", int(a * b))
         return
         
     if c == "**" :   #Under development
@@ -68,11 +64,12 @@ def main1(a, b, c):
                 print(int(a) , "**" , b , "=" , int(a)**b)
             #else :
                 #print(int(a) , "**" , int(b) , "=" , int(a ** b))
-            return
+                return
     else:
         print("error please enter (* , / , + , -)")
         return
-    
+
+
 def loop():
     while True:
         raw = input("yek chiz vared konid for exam :: 5 + 1 or ('exit') :").strip()  #Receives a number from the user (with a space)
