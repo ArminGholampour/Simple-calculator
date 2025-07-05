@@ -71,21 +71,24 @@ def main1(a, b, c):
 
 
 def loop():
-    while True:
-        raw = input("yek chiz vared konid for exam :: 5 + 1 or ('exit') :").strip()  #Receives a number from the user (with a space)
-        
-        if raw.lower() in ("exit", "break", "quit", "quit()"): 
-            print("bye bye")
-            break
-        
-        try:
-            a_str, c, b_str = raw.split()
-            a = float(a_str)
-            b = float(b_str)
-        except:
-            print("pleas enter correct number's.")
+    while True :
+        raw = input("pleas enter number -->").strip()
+        if raw.lower() in ("exit" , "quit" , "quit()" , "break") :
+             confirm = input("do you want close the app?? yes or exit to quit and no to continue -->").strip()
+             if confirm.lower() in ("yes" , "exit") :
+                 print("bye bye")
+                 break
+             elif confirm.lower() in ("no" , "...") :
+                 continue
+        try :
+                 
+            a_str , c , b_str = raw.split()
+            a =float(a_str)
+            b =float(b_str)
+
+        except :
+            print("--pleas enter correct number--")
             continue
-        
-        main1(a, b, c)
+        main(a , b ,c)
 
 loop()
